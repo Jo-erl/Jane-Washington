@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/admin/css/admin.css">
+    <meta name="description" content="Creating digital experiences that matter">
+    <meta name="robots" content="index, follow">
+    <!-- ALTERNATIVES: NOINDEX, NOFOLLOW, NOARCHIVE, ETC. -->
+    <link rel="canonical" href="https://www.quodepalette.com/">
+    <meta name="language" content="English">
+    <meta name="author" content="Quode Palette">
+    <meta name="keywords" content="proramming, coding, html, css, js, javascript, react, nodejs, web development">
+    <link rel="icon" href="/public/imgs/2.png" />
+    <!-- OPEN GRAPH / SOCIAL MEDIA -->
+    <meta property="og:title" content="Jane Washington | Full Stack Developer">
+    <meta property="og:description" content="Creating digital experiences that matter">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quodepalette.com">
+    <meta property="og:site_name" content="Jane Washington">
+
+</head>
+
+<body>
+    <div class="admin-container">
+        <!-- SIDEBAR NAVIGATION -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="login-header">
+                    <a href="/public/index.html" class="logo">
+                        <img src="/public/imgs/2.png" alt="Logo" style="height: 50px;">
+                    </a>
+                    <h2>Jane Washington</h2>
+                </div>
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li class="active">
+                            <a href="#projects">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Projects</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="sidebar-footer">
+                    <button id="logoutBtn" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </button>
+                </div>
+        </aside>
+
+        <!-- MAIN CONTENT AREA -->
+        <main class="main-content">
+            <header class="main-header">
+                <div class="header-left">
+                    <button class="sidebar-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1>Admin Dashboard</h1>
+                </div>
+                <div class="header-right">
+                    <div class="user-profile">
+                        <span id="adminEmail">Admin</span>
+                        <div class="avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <!-- PROJECTS SECTION EDITOR -->
+                <section id="projects-editor" class="editor-section">
+                    <h2>Manage Projects</h2>
+                    <div class="projects-editor-container">
+                        <!-- EXISTING PROJECTS LIST -->
+                        <div class="existing-projects">
+                            <h3>Current Projects</h3>
+                            <div class="search-box">
+                                <input type="text" id="projectSearch" placeholder="Search projects...">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <ul id="projectsList" class="projects-list">
+                                <!-- PROJECTS WILL BE DYNAMICALLY LOADED HERE -->
+                            </ul>
+                        </div>
+
+                        <!-- ADD/EDIT PROJECT FORM -->
+                        <div class="add-project">
+                            <h3 id="formTitle">Add New Project</h3>
+                            <form id="projectForm">
+                                <input type="hidden" id="projectId">
+                                <div class="form-group">
+                                    <label for="projectTitle">Project Title*</label>
+                                    <input type="text" id="projectTitle" name="projectTitle" required
+                                        placeholder="The name of your project">
+                                </div>
+                                <div class="form-group">
+                                    <label for="projectDescription">Description*</label>
+                                    <textarea id="projectDescription" name="projectDescription" rows="3" required
+                                        placeholder="Brief description of your project"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="projectImage">Image URL*</label>
+                                    <input type="text" id="projectImage" name="projectImage" placeholder="https://..."
+                                        required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="projectTechnologies">Technologies* (comma separated)</label>
+                                    <input type="text" id="projectTechnologies" name="projectTechnologies"
+                                        placeholder="React, Node.js, MongoDB" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="projectDemoUrl">Demo URL</label>
+                                    <input type="url" id="projectDemoUrl" name="projectDemoUrl"
+                                        placeholder="Link to the live demo">
+                                </div>
+                                <div class="form-group">
+                                    <label for="projectCodeUrl">Code URL</label>
+                                    <input type="url" id="projectCodeUrl" name="projectCodeUrl"
+                                        placeholder="Link to the source code">
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="save-btn" id="submitBtn">Add Project</button>
+                                    <button type="button" class="cancel-btn" id="cancelBtn"
+                                        style="display: none;">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- FIREBASE SDKS -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-database-compat.js"></script>
+
+    <script src="/admin/js/admin-dashboard.js"></script>
+    <script src="/admin/js/mobile-nav.js"></script>
+</body>
+
+</html>
