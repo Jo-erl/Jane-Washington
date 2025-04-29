@@ -58,26 +58,25 @@ a {
 /* CUSTOM FONTS */
 @font-face {
   font-family: "RalewayLocal";
-  src: url("/public/css/fonts/Raleway-VariableFont_wght.ttf") format("truetype");
+  src: url("fonts/Raleway-VariableFont_wght.ttf") format("truetype");
   font-style: normal;
 }
 
 @font-face {
   font-family: "Poppins";
-  src: url("/public/css/fonts/Poppins-Regular.ttf") format("truetype");
+  src: url("fonts/Poppins-Regular.ttf") format("truetype");
   font-style: normal;
 }
 
 @font-face {
   font-family: "Montserrat";
-  src: url("/public/css/fonts/Montserrat-Regular.otf") format("opentype");
+  src: url("fonts/Montserrat-Regular.otf") format("opentype");
   font-style: normal;
 }
 
 @font-face {
   font-family: "Catchland PERSONAL USE ONLY";
-  src: url("/public/css/fonts/Catchland_PERSONAL_USE_ONLY.otf")
-    format("opentype");
+  src: url("fonts/Catchland_PERSONAL_USE_ONLY.otf") format("opentype");
   font-style: normal;
 }
 
