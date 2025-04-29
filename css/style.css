@@ -336,6 +336,7 @@ a {
   cursor: pointer;
   transition: all 0.3s;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .btn.primary {
@@ -1017,6 +1018,10 @@ a {
 
   .cta-buttons {
     justify-content: center;
+  }
+
+  .btn.primary-hero {
+    margin-bottom: 20px;
   }
 }
 
