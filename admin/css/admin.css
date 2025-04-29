@@ -110,7 +110,7 @@ body {
     var(--primary-color),
     var(--secondary-color)
   );
-  background-image: url("/public/imgs/6.png");
+  background-image: url("/imgs/6.png");
 }
 
 .login-card {
