@@ -978,10 +978,6 @@ a {
   .hero-content {
     margin-bottom: 3rem;
   }
-  
-  .hero-content h2 {
-    text-align: left !important;
-  }
 
   .cta-buttons {
     justify-content: center;
@@ -1058,5 +1054,6 @@ a {
     text-align: center;
   }
 }
+
 
 
