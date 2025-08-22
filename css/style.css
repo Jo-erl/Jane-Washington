@@ -608,8 +608,8 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
-  margin: 2rem auto;          
-  max-width: 1200px;         
+  margin: 2rem auto;    
+  max-width: 1200px;       
   padding: 0 1rem;         
 }
 
@@ -678,6 +678,14 @@ a {
 .btn.small {
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
+}
+
+/* Responsive tweak for very small screens */
+@media (max-width: 400px) {
+  .projects-grid {
+    grid-template-columns: 1fr; 
+    padding: 0 0.5rem;        
+  }
 }
 
 /* CONTACT SECTION */
@@ -1055,6 +1063,7 @@ a {
     text-align: center;
   }
 }
+
 
 
 
