@@ -193,29 +193,48 @@ a {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 80px;
-  margin: 0 100px;
+  padding: 80px 20px; /* reduced padding for smaller screens */
 }
 
 .hero .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center; /* center horizontally */
   gap: 2rem;
-  margin: 0 100px;
+  max-width: 1200px; /* keeps it from stretching too wide */
+  margin: 0 auto; /* centers the container */
+  flex-wrap: wrap; /* allows stacking on smaller screens */
+  text-align: center; /* better look on mobile */
 }
 
 .hero-content {
-  flex: 1;
+  flex: 1 1 400px; /* responsive grow/shrink */
 }
 
 .hero-image {
-  flex: 1;
+  flex: 1 1 400px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+/* Responsive tweaks */
+@media (max-width: 992px) {
+  .hero {
+    padding-top: 60px;
+  }
+  .hero .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-content {
+    order: 2; 
+  }
+  .hero-image {
+    order: 1;
+  }
 }
 
 .profile-img {
@@ -1035,3 +1054,4 @@ a {
     text-align: center;
   }
 }
+
