@@ -193,22 +193,22 @@ a {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 80px 20px; /* reduced padding for smaller screens */
+  padding: 80px 20px;  
 }
 
 .hero .container {
   display: flex;
   align-items: center;
-  justify-content: center; /* center horizontally */
+  justify-content: center;  
   gap: 2rem;
-  max-width: 1200px; /* keeps it from stretching too wide */
-  margin: 0 auto; /* centers the container */
-  flex-wrap: wrap; /* allows stacking on smaller screens */
-  text-align: center; /* better look on mobile */
+  max-width: 1200px;  
+  margin: 0 auto;  
+  flex-wrap: wrap;  
+  text-align: center; 
 }
 
 .hero-content {
-  flex: 1 1 400px; /* responsive grow/shrink */
+  flex: 1 1 400px; 
 }
 
 .hero-image {
@@ -978,6 +978,10 @@ a {
   .hero-content {
     margin-bottom: 3rem;
   }
+  
+  .hero-content h2 {
+    text-align: left !important;
+  }
 
   .cta-buttons {
     justify-content: center;
@@ -1054,4 +1058,5 @@ a {
     text-align: center;
   }
 }
+
 
